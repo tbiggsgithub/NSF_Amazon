@@ -11,3 +11,6 @@ Shared drives\Rondonia_CNH\Data\Data processing and outputs\water_variables\rain
 
 Soils data is from:
 Shared drives\Rondonia_CNH\Data\Data processing and outputs\water_variables\soils
+
+Low flod data is copied from:
+Shared drives\Rondonia_CNH\Data\Data processing and outputs\water_variables\low_flow\LowFlow estimates
