@@ -1,7 +1,28 @@
-Generate climate variables by municipality boundaries. GLDAS NOAH Monthly.  Combines v2.0 (1980-1999) with v2.1 (2000-2020).
+Generate climate variables by municipality boundaries. 
+
+1.  GLDAS NOAH Monthly.  Combines v2.0 (1980-1999) with v2.1 (2000-2020).
 
 Detailed README is on google docs:
 https://docs.google.com/document/d/1a_SBIeDomwuKWP58pl9d3NoAXy_Uwv-I__cz26kIWvs/edit?usp=sharing
 
 Comparison of v2.0 and 2.1:
 https://docs.google.com/document/d/1OiQMyO0vQ5as9-AqtHRupJG_hCB6mktRGLMv0TQGYmA/edit?usp=sharing
+
+2.  TerraClimate:
+Detailed readme in Google Earth Engine:
+
+Metadata on TerraClimate:
+https://developers.google.com/earth-engine/datasets/catalog/IDAHO_EPSCOR_TERRACLIMATE#bands
+TerraClimate is downscaled CRU data.
+Resolution 4638.3 meters 
+
+pdsi = Palmer Drought Severity Index (dimensionless, but 0.01 multiplier: divide by 100)
+pet = potential evapotranspiration, Penman Monteith equation, 0.1mm/month: divide by 10 to get mm/month
+srad = incoming shortwave radiation (0.1W/m2) (divide by 10 to get W/m2)
+tmax = mean maximum daily temperature for each month (0.1C) (divide by 10 to get degrees C)
+tmin = mean minimum daily temperature for each month (0.1C) (divide by 10 to get degrees C)
+
+Extracted in Google Earth Engine for 2015 munis.
+
+Google Earth Engine script:
+https://code.earthengine.google.com/?scriptPath=users%2Ftbiggs%2FEEFlux%3AClimate_extract_Amazon_muni%2Fterraclim_calc_tmin_munis_1980_2021  
