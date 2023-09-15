@@ -1,19 +1,19 @@
 # Load and plot ERA5 soil moisture
 
-layer = 4
+layer = 1
 cover = "Short and Tall Grass"
 fncode = "ShortTallGrassAll"  # Of the original files
-indir = paste0("K:/Shared drives/Rondonia_CNH/Data/Data processing and outputs/Water/soils/GEE_ERA5_SoilMoistAll_municipality/",cover,"/Layer",layer,"/")
+indir = paste0("K:/Shared drives/Rondonia_CNH/Data/Data processing and outputs/Water/soils/GEE_ERA5_SoilMoistAll_municipality/",cover,"/")
 fn.out = paste0("ERA5_muni_SoilMoist_19790102_20201231_",gsub(" ","",cover),"_Layer",layer,"_RO.csv")
 
 x = read.csv(paste0(indir,fn.out))
 #x1.ariq = x1[x1$]
 
 # Load muni names and codes
-indir.example = "K:/Shared drives/Rondonia_CNH/Data/Data processing and outputs/Water/soils/GEE_ERA5_SoilMoistAll_municipality/Short and Tall Grass/Layer1/"
-fn.example = "ERA5_muni_SoilMoist_19860101_19901231_polyoutShortTallGrassAllLayer1.csv"
-x.example = read.csv(paste0(indir.example,fn.example))
-x.mcode.mname = data.frame(mcode=x.example$CD_GEOCMU,mname=x.example$NM_MUNICIP)
+indir.municodes = "K:/Shared drives/Rondonia_CNH/Data/Data processing and outputs/Water/soils/GEE_ERA5_SoilMoistAll_municipality/"
+fn.municodes = "MuniCodes_Names_All_Amazon.csv"
+x.mcode.mname = read.csv(paste0(indir.municodes,fn.municodes))
+
 RO.codes = names(x)[grep("11",names(x))]
 RO.codes = substr(RO.codes,2,8)
 RO.codes.df = data.frame(RO.codes,foo=NA)
@@ -38,3 +38,4 @@ for (j in 1:length(years.to.plot)){
   }
   legend("bottomleft",legend=years.to.plot,col=colvec,lty=1,bty="n",lwd=c(1,1,1,1,1,2))
 }
+
