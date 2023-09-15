@@ -1,3 +1,5 @@
 Processing ERA5 data, municipality level.
 1.  Load and collate individual file (ERA5_soil_moisture_municipalities_collate_time_series.R)
 2.  Load collated files and plot (ERA5_soil_moisture_municipalities_load_plot.R)
+
+Metadata are in https://docs.google.com/document/d/1thg31FvxmFQkGcQFKGnnmu66K6qOsezrnaLzkyReId8/edit?usp=sharing
