@@ -1,0 +1,3 @@
+Processing ERA5 data, municipality level.
+1.  Load and collate individual file (ERA5_soil_moisture_municipalities_collate_time_series.R)
+2.  Load collated files and plot (ERA5_soil_moisture_municipalities_load_plot.R)
